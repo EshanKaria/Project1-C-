@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+void calc(int x);
+int main()
+{
+	int n;
+	cout<<"Enter a number from 1 to 100\n";
+	cin>>n;
+	calc(n);
+}
+
+void calc(int x)
+{
+	int i,j;
+	int pn[25]={2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,91}; //Declaring an array with prime numbers from 1-100
+	for(i=0;i<25;i++)
+	{
+		for(j=i;j<25;j++)
+		{
+			if(pn[i]+pn[j]==x)
+			{
+				cout<<"\n"<<pn[i]<<" + "<<pn[j]<<" = "<<x;
+			}
+			else
+			{
+				continue;
+			}
+		}
+	}
+}
