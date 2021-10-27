@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int calc();
+class Myclass
+{
+	public:
+		void calc();
+		int h,m,s,time=0;
+};
+
+int main()
+{
+	Myclass obj;
+	obj.calc();
+}
+
+void Myclass::calc()
+{
+	cout<<"Enter the time in HH MM SS format\n ";
+	cin>>h>>m>>s;
+	time=(3600*h)+(60*m)+s;
+	cout<<"The time in seconds is "<<time;
+}
